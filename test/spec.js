@@ -48,7 +48,7 @@ session.setGlobalHandlers(console.log, console.log);
 var rootId;
 
 describe('CmisJS library test', function () {
-
+  this.timeout(15000);
   it('should connect to a repository', function (done) {
   	session.setCredentials(username, password).loadRepositories()
   		.ok(function (data) {
