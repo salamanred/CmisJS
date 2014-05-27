@@ -48,7 +48,7 @@ session.setGlobalHandlers(console.log, console.log);
 var rootId;
 
 describe('CmisJS library test', function () {
-  
+
   it('should connect to a repository', function (done) {
   	session.setCredentials(username, password).loadRepositories()
   		.ok(function (data) {
@@ -143,7 +143,7 @@ describe('CmisJS library test', function () {
             required:false,
             cardinality:'single',
             queryable:true,
-            orderable:true,
+            orderable:true
         	} 
     	}
 	}
@@ -154,7 +154,7 @@ describe('CmisJS library test', function () {
   		done();
   	}).notOk(function (res) {
   		assert(res.body.exception=='notSupported', "not supported");
-  		console.log("Type creation is not supportedi n this repository")
+  		console.log("Type creation is not supported in this repository");
   		done();
   	});
   });
